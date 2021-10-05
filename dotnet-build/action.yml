@@ -19,6 +19,8 @@ runs:
         dotnet-version: ${{ inputs.dotnet-version }}
         
     - run: dotnet restore ${{ inputs.project-path }}
+      shell: bash
 
     - run: dotnet build ${{ inputs.project-path }} 
+      shell: bash
  
