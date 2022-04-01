@@ -10,7 +10,8 @@ runs:
     - name: Setup Maven Action
       uses: s4u/setup-maven-action@v1.2.1
       with:
-        java-version: 8
+        java-version: ${{ matrix.java }}
+        maven-version: ${{ matrix.maven }}
 
     - name: maven build
-      run: mvn -V ...
+      run: mvn verify
