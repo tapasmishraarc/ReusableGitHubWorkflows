@@ -1,0 +1,7 @@
+name: "Build java"  
+description: "Build java....."
+runs:
+  using: "composite"
+    - name: maven build
+      run: mvn -B package --file pom.xml
+                    
