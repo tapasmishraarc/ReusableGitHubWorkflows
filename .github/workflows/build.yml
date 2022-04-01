@@ -7,9 +7,11 @@ on:
         description: 'The dotnet version to use'
         default: '2.1.x'
         required: false
+        type: string
       project-path:
         description: 'The path to the project'
         required: true
+        type: string
 jobs:
   build_job:
     name: Pass input and secrets to my-action
@@ -19,6 +21,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Build job
         uses: tapasmishraarc/demo-action-composite/dotnet-build@v0.0.1
-          with:
-            dotnet-version: 5.0.x
-            project-path: src/DemoReusableTemplates.csproj
+        with:
+          dotnet-version: 5.0.x
+          project-path: src/DemoReusableTemplates.csproj
