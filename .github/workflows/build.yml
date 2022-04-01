@@ -12,6 +12,10 @@ on:
         description: 'The path to the project'
         required: true
         type: string
+      tech-type:
+        description: 'technology type'
+        required: true
+        type: string
 jobs:
   build_job:
     name: Pass input and secrets to my-action
@@ -19,6 +23,7 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
+      - if: contains(['dotnet'],input.tech-type)
       - name: Build job
         uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v0.0.1
         with:
