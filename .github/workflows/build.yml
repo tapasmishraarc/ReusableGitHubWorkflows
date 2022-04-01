@@ -27,7 +27,7 @@ jobs:
         
       - name: Build dotnet job
         if: contains('dotnet',inputs.tech-type)
-        uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v4
+        uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v5
         with:
           dotnet-version: 5.0.x
           project-path: src/DemoReusableTemplates.csproj
