@@ -24,7 +24,7 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v2
       - name: Build job
-        if: contains(['dotnet'],input.tech-type)
+        if: contains('dotnet',input.tech-type)
         uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v0.0.1
         with:
           dotnet-version: 5.0.x
