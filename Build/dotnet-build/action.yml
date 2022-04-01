@@ -24,4 +24,7 @@ runs:
     - name: Building dotnet application
       run: dotnet build ${{ inputs.project-path }} 
       shell: bash
+    - name: Echo dotnet application
+      run: echo "hi I am dotnet" 
+      shell: bash
  
