@@ -24,9 +24,10 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
+        
       - name: Build dotnet job
         if: contains('dotnet',inputs.tech-type)
-        uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v0.0.1
+        uses: ./.github/actions/dotnet-build
         with:
           dotnet-version: 5.0.x
           project-path: src/DemoReusableTemplates.csproj
