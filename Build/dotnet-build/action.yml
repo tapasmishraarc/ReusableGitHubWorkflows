@@ -1,4 +1,4 @@
-name: "Build dotnet"
+name: "Build dotnet application"
 description: "Build dotnet..."
 inputs:
   dotnet-version:
