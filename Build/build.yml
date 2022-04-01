@@ -15,7 +15,10 @@ jobs:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
     steps:
-      uses: tapasmishraarc/demo-action-composite/dotnet-build@v0.0.1
-        with:
-          dotnet-version: 5.0.x
-          project-path: src/DemoReusableTemplates.csproj
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Build job
+        uses: tapasmishraarc/demo-action-composite/dotnet-build@v0.0.1
+          with:
+            dotnet-version: 5.0.x
+            project-path: src/DemoReusableTemplates.csproj
