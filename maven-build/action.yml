@@ -4,10 +4,11 @@ description: "maven build...."
 runs:
   using: "composite"
   steps:
-      - name: Setup Maven Action
-        uses: s4u/setup-maven-action@v1.2.1
-        with:
-          java-version: 8
+    - name: Setup Maven Action
+      uses: s4u/setup-maven-action@v1.2.1
+      with:
+        java-version: 8
 
-      - name: Build with Maven
-        run: mvn verify
+    - name: Build with Maven
+      run: mvn verify
+

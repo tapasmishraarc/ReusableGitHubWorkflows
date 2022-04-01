@@ -27,7 +27,7 @@ jobs:
         
       - name: Build dotnet job
         if: contains('dotnet',inputs.tech-type)
-        uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v7
+        uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v8
         with:
           dotnet-version: 5.0.x
           project-path: src/DemoReusableTemplates.csproj
@@ -35,6 +35,6 @@ jobs:
 #         uses: actions/checkout@v2    
       - name: Build java job
         if: contains('java',inputs.tech-type)
-        uses: tapasmishraarc/ReusableGitHubWorkflows/maven-build@v7
+        uses: tapasmishraarc/ReusableGitHubWorkflows/maven-build@v8
        
  
