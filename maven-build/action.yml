@@ -10,3 +10,4 @@ runs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn --batch-mode --update-snapshots verify
+      shell: bash
