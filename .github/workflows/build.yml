@@ -31,8 +31,8 @@ jobs:
           dotnet-version: 5.0.x
           project-path: src/DemoReusableTemplates.csproj
           
-      - name: Build java job
-        if: contains('java',inputs.tech-type)
-        uses: tapasmishraarc/ReusableGitHubWorkflows/maven-build@v0.0.1
+#       - name: Build java job
+#         if: contains('java',inputs.tech-type)
+#         uses: tapasmishraarc/ReusableGitHubWorkflows/maven-build@v0.0.1
        
  
