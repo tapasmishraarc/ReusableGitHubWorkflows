@@ -20,11 +20,12 @@ jobs:
   build_job:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
-    if: contains('dotnet',inputs.tech-type)
+    
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
       - name: Build dotnet job
+        if: contains('dotnet',inputs.tech-type)
         uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v0.0.1
         with:
           dotnet-version: 5.0.x
