@@ -21,6 +21,7 @@ runs:
     - run: dotnet restore ${{ inputs.project-path }}
       shell: bash
 
-    - run: dotnet build ${{ inputs.project-path }} 
+    - name: Building dotnet application
+      run: dotnet build ${{ inputs.project-path }} 
       shell: bash
  
