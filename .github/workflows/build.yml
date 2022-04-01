@@ -1,0 +1,24 @@
+name: Build
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        description: 'The dotnet version to use'
+        default: '2.1.x'
+        required: false
+      project-path:
+        description: 'The path to the project'
+        required: true
+jobs:
+  build_job:
+    name: Pass input and secrets to my-action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Build job
+        uses: tapasmishraarc/demo-action-composite/dotnet-build@v0.0.1
+          with:
+            dotnet-version: 5.0.x
+            project-path: src/DemoReusableTemplates.csproj
