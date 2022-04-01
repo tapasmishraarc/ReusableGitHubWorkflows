@@ -27,7 +27,7 @@ jobs:
         
       - name: Build dotnet job
         if: contains('dotnet',inputs.tech-type)
-        uses: ./.github/actions/dotnet-build
+        uses: ./actions/dotnet-build
         with:
           dotnet-version: 5.0.x
           project-path: src/DemoReusableTemplates.csproj
