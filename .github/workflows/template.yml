@@ -33,5 +33,5 @@ jobs:
       - name: Build job
         uses: tapasmishraarc/ReusableGitHubWorkflows/build@v1.0.7
         with:
-          project-path: ${{ github.event.inputs.project-path }}
-          tech-type: ${{ github.event.inputs.tech-type }}
+          project-path: ${{ inputs.project-path }}
+          tech-type: ${{ inputs.tech-type }}
