@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Build job
-        uses: tapasmishraarc/ReusableGitHubWorkflows/build@v1.0.3
+        uses: tapasmishraarc/ReusableGitHubWorkflows/build@v1.0.4
         with:
           project-path: src/DemoReusableTemplates.csproj
 #      
