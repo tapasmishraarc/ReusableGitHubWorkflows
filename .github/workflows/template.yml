@@ -16,25 +16,24 @@ on:
         description: 'technology type'
         required: true
         type: string
+      ci-enabled:
+        description: 'CI enabled'
+        required: true
+        type: boolean
+        default: true
 jobs:
   build_job:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
-    
+    if: inputs.ci-enabled == true
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
         
-      - name: Build dotnet job
-        if: contains('dotnet',inputs.tech-type)
-        uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v1.0.3
+      - name: Build job
+        uses: tapasmishraarc/ReusableGitHubWorkflows/build@v1.0.3
         with:
-          dotnet-version: 5.0.x
           project-path: src/DemoReusableTemplates.csproj
-#       - name: Checkout the code
-#         uses: actions/checkout@v2    
-      - name: Build java job
-        if: contains('java',inputs.tech-type)
-        uses: tapasmishraarc/ReusableGitHubWorkflows/maven-build@v1.0.3
+#      
        
  
