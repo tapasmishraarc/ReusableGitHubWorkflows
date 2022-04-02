@@ -34,6 +34,4 @@ jobs:
         uses: tapasmishraarc/ReusableGitHubWorkflows/build@v1.0.7
         with:
           project-path: inputs.project-path
-	  tech-type: inputs.tech-type
-       
- 
+          tech-type: inputs.tech-type
