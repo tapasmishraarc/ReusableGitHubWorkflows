@@ -22,7 +22,7 @@ runs:
         
     - name: Build dotnet job
       if: contains('dotnet',inputs.tech-type)
-      uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v1.0.3
+      uses: tapasmishraarc/ReusableGitHubWorkflows/dotnet-build@v1.0.7
       with:
         dotnet-version: 5.0.x
         project-path: src/DemoReusableTemplates.csproj
@@ -31,4 +31,4 @@ runs:
    
     - name: Build java job
       if: contains('java',inputs.tech-type)
-      uses: tapasmishraarc/ReusableGitHubWorkflows/maven-build@v1.0.5
+      uses: tapasmishraarc/ReusableGitHubWorkflows/maven-build@v1.0.7
