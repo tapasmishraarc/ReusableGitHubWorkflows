@@ -35,6 +35,5 @@ jobs:
         with:
           project-path: inputs.project-path
 	  tech-type: inputs.tech-type
-#      
        
  
