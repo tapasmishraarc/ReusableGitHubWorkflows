@@ -25,7 +25,7 @@ jobs:
   build_job:
     name: Pass input and secrets to my-action
     runs-on: ubuntu-latest
-    if: ${{ inputs.ci-enabled }} == true
+    if: ${{ inputs.ci-enabled == true }} 
     steps:
       - name: Checkout the code
         uses: actions/checkout@v2
