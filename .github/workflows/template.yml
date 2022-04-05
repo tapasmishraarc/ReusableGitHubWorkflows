@@ -1,5 +1,4 @@
 name: ReusableTemplate
-
 on:
   workflow_call:
     inputs:
